@@ -28,7 +28,7 @@ export default {
   /*
   ** Global CSS
   */
-  loading: {color: '#FFA840', height: '5px'},
+  loading: {color: '#b166a7 ', height: '5px'},
   css: [
   ],
   /*

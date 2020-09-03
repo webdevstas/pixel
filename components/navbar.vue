@@ -1,7 +1,7 @@
 <template>    
 <div>
-  <b-navbar toggleable="lg" type="dark" variant="info" fixed="top">
-    <b-navbar-brand><nuxt-link class="nav-link" to='/'>WebDev</nuxt-link></b-navbar-brand>
+  <b-navbar toggleable="lg" fixed="top">
+    <b-navbar-brand><nuxt-link class="nav-link" to='/'>Pixel Studio Sochi</nuxt-link></b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -33,6 +33,12 @@
 </template>
 
 <style lang="sass" scoped>
-    .nav-link
-        color: #fff
+@import '~assets/sass/_variables.sass'
+.navbar-brand a
+  color: $pink
+.nav-link
+  color: #fff
+.navbar
+  background-color: $grey
+  color: $olive
 </style>

@@ -10,11 +10,12 @@
 </template>
 
 <style lang="sass">
-.container
-  justify-content: start !important
-  min-height: 100% !important
+@import '~assets/sass/_variables.sass'
 .content-area
   margin-top: 80px
   width: 100%
   text-align: left
+.btn-primary
+  background-color: $bej_dark !important
+  border: none
 </style>

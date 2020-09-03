@@ -1,5 +1,5 @@
 {
-  "name": "webdev",
+  "name": "pixel",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -37,5 +37,13 @@
     "test": "test"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdevstas/pixel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webdevstas/pixel/issues"
+  },
+  "homepage": "https://github.com/webdevstas/pixel#readme"
 }
