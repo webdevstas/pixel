@@ -67,4 +67,6 @@
   color: $pink !important
 .dropdown-item:active
   background-color: $pink !important
+.nav-item
+  font-size: 18px
 </style>

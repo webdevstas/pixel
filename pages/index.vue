@@ -1,17 +1,36 @@
 <template>
-    <div>
-      <main-carusel/>
-      <h1 class="title">
-        Pixel Studio Sochi
-      </h1>
-    </div>
+  <div>
+    <main-carusel />
+    <h1 class="title">Pixel Studio Sochi</h1>
+    <b-icon-arrow-up></b-icon-arrow-up>
+  </div>
 </template>
 
 <script>
-export default {}
+import { BIcon, BIconArrowUp, BIconArrowDown } from 'bootstrap-vue'
+export default {
+  data() {
+    return {};
+  },
+  head() {
+    return {
+      title: "Pixel Studio Sochi",
+      meta: [
+        {
+          name: "description",
+          content: "Обучение перманентному макияжу в Сочи",
+        },
+      ],
+    };
+  },
+  components: {
+    BIcon,
+    BIconArrowUp,
+    BIconArrowDown
+  }
+};
 </script>
 
 <style lang="sass" scoped>
-
 </style>
   
