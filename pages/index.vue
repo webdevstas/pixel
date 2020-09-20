@@ -27,8 +27,17 @@ export default {
     BIcon,
     BIconArrowUp,
     BIconArrowDown
+  },
+    async fetch({store}){
+        if (store.getters['posts/jwt'] === ''){
+            await store.dispatch('posts/authorize')
+        }  
+    },
+    computed: {
+      
   }
 };
+
 </script>
 
 <style lang="sass" scoped>

@@ -4,23 +4,20 @@
       <h1>Блог</h1>
     </b-row>
     <b-row>
-      <b-col><b-button style="margin-bottom: 30px" variant="primary" @click="openPostForm">{{isPostFormOpened ? 'Отмена' : 'Добавить пост'}}</b-button></b-col>
-      <new-post-form v-if="isPostFormOpened"/>
-    </b-row>
-    <b-row>
       <b-col v-for="post in this.posts" :key="post._id">
         <b-card
           :title="post.title"
-          img-src="https://picsum.photos/600/300/?image=25"
+          :img-src="`http://localhost:1337${post.image.url}`"
           img-alt="Image"
           img-top
           tag="article"
           style="max-width: 20rem;"
           class="mb-2"
         >
-          <b-card-text>{{post.body}}</b-card-text>
-          <nuxt-link :to="openPost(post.alias)"><b-button variant="primary">Open</b-button></nuxt-link>
-          <b-button type="reset" variant="danger" @click ="deletePost(post.alias)">Удалить</b-button>
+          <b-card-text>{{post.excerpt}}</b-card-text>
+          <nuxt-link :to="openPost(post.slug)">
+            <b-button variant="primary">Open</b-button>
+          </nuxt-link>
         </b-card>
       </b-col>
     </b-row>
@@ -29,38 +26,30 @@
 
 <script>
 export default {
-    async fetch({store}){
-        if (store.getters['posts/posts'].length === 0){
-            await store.dispatch('posts/fetch')
-        }  
-    },
+  async fetch({ store }) {
+    if (store.getters["posts/jwt"] === "") {
+      await store.dispatch("posts/authorize");
+    }
+    if (store.getters["posts/posts"].length === 0) {
+      await store.dispatch("posts/fetch");
+    }
+  },
   data: function () {
-    return {
-      isPostFormOpened: false
-    };
+    return {};
   },
   computed: {
-      posts: function(){
-          return this.$store.getters['posts/posts']
-      }
+    posts: function () {
+      return this.$store.getters["posts/posts"];
+    },
+    token: function () {
+      return this.$store.getters["posts/jwt"];
+    },
   },
-  
   methods: {
-    openPost(alias){
-      return `/blog/${alias}`
+    openPost(slug) {
+      return `/blog/${slug}`;
     },
-    deletePost: async function (alias){
-      try {
-        await this.$axios.delete(`http://localhost:33310/api/posts/${alias}`)
-      } catch (e) {
-        throw e
-      }
-      await this.$store.dispatch('posts/fetch')
-    },
-    openPostForm: function(){
-      this.isPostFormOpened = !this.isPostFormOpened
-    }
-  }
+  },
 };
 </script>
 
