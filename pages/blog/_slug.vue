@@ -9,18 +9,7 @@
 export default {
   async asyncData({ params, error, $axios, store }) {
     try {
-      if (store.getters["posts/jwt"] === "") {
-        await store.dispatch("posts/authorize");
-      }
-      const token = await store.getters["posts/jwt"];
-      const post = await $axios.$get(
-        `http://localhost:1337/posts?slug=${params.slug}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const post = await $axios.$get(`http://localhost:1337/posts?slug=${params.slug}`);
       return { post };
     } catch (e) {
       error({ statusCode: 404, message: "Страница не найдена" });

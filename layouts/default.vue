@@ -1,11 +1,12 @@
 <template>
   <div>
     <navbar />
-    <b-container>
+    <b-container fluid>
       <div class="content-area">
         <Nuxt />
       </div>
     </b-container>
+    <div class="content-area__bg"></div>
   </div>
 </template>
 
@@ -14,8 +15,25 @@
 @import '~assets/sass/_variables.sass'
 body
   font-family: 'Philosopher', sans-serif
+  background-image: url('~assets/img/sea.jpg')
+  background-size: cover
 .content-area
-  margin-top: 85px
+  position: relative
+  margin-top: 100px
+  height: calc(100vh - 120px)
+  padding: 10px
+  z-index: 1000
+.content-area__bg
+  position: absolute
+  z-index: 5
+  margin-top: 100px
+  background-image: url('~assets/img/sea.jpg')
+  background-size: cover
+  height: calc(100vh - 120px)
+  filter: blur(8px)
+  width: 98%
+  left: 1%
+  top: 0
 .btn-primary
   background-color: $bej_dark !important
   border: none

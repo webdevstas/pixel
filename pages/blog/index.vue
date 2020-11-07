@@ -1,13 +1,11 @@
 <template>
   <div>
-    <b-row>
       <h1>Блог</h1>
-    </b-row>
     <b-row>
       <b-col v-for="post in this.posts" :key="post._id">
         <b-card
           :title="post.title"
-          :img-src="`http://localhost:1337${post.image.url}`"
+          :img-src="`http://localhost:1337${post.image.formats.medium.url}`"
           img-alt="Image"
           img-top
           tag="article"
@@ -16,7 +14,7 @@
         >
           <b-card-text>{{post.excerpt}}</b-card-text>
           <nuxt-link :to="openPost(post.slug)">
-            <b-button variant="primary">Open</b-button>
+            <b-button variant="primary">Читать</b-button>
           </nuxt-link>
         </b-card>
       </b-col>
@@ -27,9 +25,6 @@
 <script>
 export default {
   async fetch({ store }) {
-    if (store.getters["posts/jwt"] === "") {
-      await store.dispatch("posts/authorize");
-    }
     if (store.getters["posts/posts"].length === 0) {
       await store.dispatch("posts/fetch");
     }
@@ -42,7 +37,7 @@ export default {
       return this.$store.getters["posts/posts"];
     },
     token: function () {
-      return this.$store.getters["posts/jwt"];
+      return this.$store.getters["jwt/jwt"];
     },
   },
   methods: {
