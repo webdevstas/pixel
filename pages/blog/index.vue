@@ -5,7 +5,7 @@
       <b-col v-for="post in this.posts" :key="post._id">
         <b-card
           :title="post.title"
-          :img-src="`https://hellopermanentstrapi.herokuapp.com${post.image.url}`"
+          :img-src="`${post.image}`"
           img-alt="Image"
           img-top
           tag="article"
