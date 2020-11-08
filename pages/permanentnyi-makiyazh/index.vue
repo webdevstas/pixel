@@ -5,7 +5,7 @@
       <b-col>
         <b-card
           title="Брови"
-          img-src="https://hello-permanent.onlineassets/img/girls/brows-1.jpg"
+          img-src="https://hello-permanent.online/img/girls/brows-1.jpg"
           img-alt="Image"
           img-top
           tag="article"
