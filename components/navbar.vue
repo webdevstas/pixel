@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" fixed="top">
       <nuxt-link exact class="nav-link" to="/">
-        <!-- <img class="header-logo" src="~assets/img/logo.svg" alt /> -->
+        <img class="header-logo" src="~assets/img/logo.svg" alt />
       </nuxt-link>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
