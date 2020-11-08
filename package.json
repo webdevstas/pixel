@@ -48,5 +48,9 @@
   "bugs": {
     "url": "https://github.com/webdevstas/pixel/issues"
   },
-  "homepage": "https://github.com/webdevstas/pixel#readme"
+  "homepage": "https://github.com/webdevstas/pixel#readme",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  }
 }
