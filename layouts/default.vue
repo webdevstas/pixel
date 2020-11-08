@@ -15,7 +15,7 @@
 @import '~assets/sass/_variables.sass'
 body
   font-family: 'Philosopher', sans-serif
-  background-image: url('~assets/img/gold.jpg')
+  background-image: url('https://hello-permanent.online/img/gold.jpg')
   background-position: 0% 0%
   background-size: cover
   background-attachment: fixed
@@ -29,12 +29,12 @@ body
   position: fixed
   z-index: 5
   margin-top: 100px
-  background-image: url('~assets/img/gold.jpg')
+  background-image: url('https://hello-permanent.online/img/gold.jpg')
   background-position: 0% 0%
   background-size: cover
   background-attachment: fixed
   height: calc(100vh - 120px)
-  filter: blur(12px)
+  filter: blur(12px) grayscale(50%)
   width: 98%
   left: 1%
   top: 0
@@ -55,6 +55,8 @@ h1
   transition: 10s
 .card:hover
   filter: hue-rotate(360deg)
+p
+  color: #000
  
 </style>
 

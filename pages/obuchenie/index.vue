@@ -5,7 +5,7 @@
       <b-col>
         <b-card
           title="Старт перманент.1"
-          img-src="~/assets/img/girls/brows-1.jpg"
+          img-src="https://hello-permanent.online/img/girls/brows-1.jpg"
           img-alt="Image"
           img-top
           tag="article"
@@ -22,7 +22,7 @@
       <b-col>
         <b-card
           title="Старт перманент.2"
-          img-src="~/assets/img/girls/lips-2.jpg"
+          img-src="https://hello-permanent.online/img/girls/lips-2.jpg"
           img-alt="Image"
           img-top
           tag="article"

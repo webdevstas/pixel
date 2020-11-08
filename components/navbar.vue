@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" fixed="top">
       <nuxt-link exact class="nav-link" to="/">
-        <!-- <img class="header-logo" src="~assets/img/logo.svg" alt /> -->
+        <img class="header-logo" src="https://hello-permanent.online/img/logo.svg" alt />
       </nuxt-link>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -56,7 +56,7 @@
 .navbar-brand a
   color: $pink
 .navbar
-  background-color: rgba(0, 0, 0, .1)
+  background-color: rgba(0, 0, 0, .3)
   color: $olive
 .header-logo
   width: 100px
