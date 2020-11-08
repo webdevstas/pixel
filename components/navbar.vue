@@ -56,12 +56,12 @@
 .navbar-brand a
   color: $pink
 .navbar
-  background-color: rgba(225, 202, 194, 0)
+  background-color: rgba(0, 0, 0, .1)
   color: $olive
 .header-logo
   width: 100px
 .nuxt-link-active
-  color: $pink !important
+  color: #000 !important
 .dropdown-item:active
   background-color: $pink !important
 .nav-item

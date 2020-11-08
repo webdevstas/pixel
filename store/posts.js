@@ -12,7 +12,7 @@ export const actions = {
         try {
             const posts = await this.$axios({
                 method: 'get',
-                url: 'http://localhost:1337/posts',
+                url: 'https://hellopermanentstrapi.herokuapp.com/posts',
             })
             commit('setPosts', posts.data)
         }

@@ -15,22 +15,26 @@
 @import '~assets/sass/_variables.sass'
 body
   font-family: 'Philosopher', sans-serif
-  background-image: url('~assets/img/sea.jpg')
+  background-image: url('~assets/img/gold.jpg')
+  background-position: 0% 0%
   background-size: cover
+  background-attachment: fixed
 .content-area
   position: relative
   margin-top: 100px
-  height: calc(100vh - 120px)
+  height: auto
   padding: 10px
   z-index: 1000
 .content-area__bg
-  position: absolute
+  position: fixed
   z-index: 5
   margin-top: 100px
-  background-image: url('~assets/img/sea.jpg')
+  background-image: url('~assets/img/gold.jpg')
+  background-position: 0% 0%
   background-size: cover
+  background-attachment: fixed
   height: calc(100vh - 120px)
-  filter: blur(8px)
+  filter: blur(12px)
   width: 98%
   left: 1%
   top: 0
@@ -40,7 +44,18 @@ body
 .form-control:focus, .btn-primary:focus
   border-color: $pink
   box-shadow: 0 0 0 0.2rem rgba(177, 102, 167, 0.25)
-
+h1 
+  text-align: center
+  margin-bottom: 30px
+.card
+  margin: auto
+  text-align: center
+  background-color: rgba(255,255,255, .2)
+  text-transform: uppercase
+  transition: 10s
+.card:hover
+  filter: hue-rotate(360deg)
+ 
 </style>
 
   

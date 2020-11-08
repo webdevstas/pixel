@@ -9,7 +9,7 @@
 export default {
   async asyncData({ params, error, $axios, store }) {
     try {
-      const post = await $axios.$get(`http://localhost:1337/posts?slug=${params.slug}`);
+      const post = await $axios.$get(`https://hellopermanentstrapi.herokuapp.com/posts?slug=${params.slug}`);
       return { post };
     } catch (e) {
       error({ statusCode: 404, message: "Страница не найдена" });
