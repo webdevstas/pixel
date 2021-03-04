@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" fixed="top">
       <nuxt-link exact class="nav-link" to="/">
-        <img class="header-logo" src="https://hello-permanent.online/img/logo.svg" alt />
+        <img class="header-logo" src="~assets/img/logo.svg" alt />
       </nuxt-link>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -51,21 +51,49 @@
   </div>
 </template>
 
+<script>
+export default {
+  methods: {
+   
+  }
+}
+</script>
+
 <style lang="sass" scoped>
 @import '~assets/sass/_variables.sass'
 .navbar-brand a
   color: $pink
 .navbar
-  background-color: rgba(0, 0, 0, .3)
-  color: $olive
+  color: #fff
+  position: fixed
+  z-index: 1002
+  &:after
+    content: ''
+    display: block
+    width: 100%
+    height: 83px
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -1
+    background-size: cover
+    background-attachment: fixed
+    backdrop-filter: blur(12px) brightness(70%)
 .header-logo
   width: 100px
 .nuxt-link-active
   color: #000 !important
+.dropdown-menu
+  background-color: rgba(255,255,255, .5) !important
 .dropdown-item:active
   background-color: $pink !important
 .nav-item
   font-size: 18px
 .navbar-light .navbar-nav .nav-link .dropdown-toggle span
   color: #fff
+@media (max-width: 991px) 
+  .navbar-collapse
+    background-color: rgba(255,255,255, .95)
+    padding: 10px
+    border-radius: 5px
 </style>

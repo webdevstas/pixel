@@ -5,7 +5,7 @@
       <b-col>
         <b-card
           title="Брови"
-          img-src="https://hello-permanent.online/img/girls/brows-1.jpg"
+          img-src="~assets/img/girls/brows-1.jpg"
           img-alt="Image"
           img-top
           tag="article"
@@ -23,7 +23,7 @@
       <b-col>
         <b-card
           title="Губы"
-          img-src="https://hello-permanent.online/img/girls/lips-2.jpg"
+          img-src="~assets/img/girls/lips-2.jpg"
           img-alt="Image"
           img-top
           tag="article"
@@ -41,7 +41,7 @@
       <b-col>
         <b-card
           title="Веки"
-          img-src="https://hello-permanent.online/img/girls/brows-2.jpg"
+          img-src="~assets/img/girls/brows-2.jpg"
           img-alt="Image"
           img-top
           tag="article"
@@ -61,7 +61,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+    head() {
+    return {
+      title: "HELLO Permanent",
+      meta: [
+        {
+          name: "description",
+          content: "Обучение перманентному макияжу в Сочи",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="sass">

@@ -15,8 +15,7 @@
 @import '~assets/sass/_variables.sass'
 body
   font-family: 'Philosopher', sans-serif
-  background-image: url('https://hello-permanent.online/img/gold.jpg')
-  background-position: 0% 0%
+  background-image: url('~assets/img/gold.jpg')
   background-size: cover
   background-attachment: fixed
 .content-area
@@ -25,19 +24,16 @@ body
   height: auto
   padding: 10px
   z-index: 1000
-.content-area__bg
-  position: fixed
-  z-index: 5
-  margin-top: 100px
-  background-image: url('https://hello-permanent.online/img/gold.jpg')
-  background-position: 0% 0%
-  background-size: cover
-  background-attachment: fixed
-  height: calc(100vh - 120px)
-  filter: blur(12px) grayscale(50%)
-  width: 98%
-  left: 1%
-  top: 0
+  &__bg
+    position: fixed
+    z-index: 5
+    margin-top: 80px
+    background-size: cover
+    background-attachment: fixed
+    height: calc(100vh - 80px)
+    backdrop-filter: blur(12px) grayscale(50%)
+    width: 100%
+    top: 0
 .btn-primary
   background-color: $bej_dark !important
   border: none
@@ -52,9 +48,10 @@ h1
   text-align: center
   background-color: rgba(255,255,255, .2)
   text-transform: uppercase
-  transition: 10s
-.card:hover
-  filter: hue-rotate(360deg)
+  transition: 1s
+  filter: saturate(75%)
+  &:hover
+    filter: saturate(100%)
 p
   color: #000
  

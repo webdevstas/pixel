@@ -38,7 +38,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+    head() {
+    return {
+      title: "HELLO Permanent",
+      meta: [
+        {
+          name: "description",
+          content: "Обучение перманентному макияжу в Сочи",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>

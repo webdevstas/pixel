@@ -29,6 +29,17 @@ export default {
       await store.dispatch("posts/fetch");
     }
   },
+    head() {
+    return {
+      title: "HELLO Permanent",
+      meta: [
+        {
+          name: "description",
+          content: "Обучение перманентному макияжу в Сочи",
+        },
+      ],
+    };
+  },
   data: function () {
     return {};
   },

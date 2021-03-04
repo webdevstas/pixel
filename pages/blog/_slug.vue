@@ -15,6 +15,17 @@ export default {
       error({ statusCode: 404, message: "Страница не найдена" });
     }
   },
+    head() {
+    return {
+      title: "HELLO Permanent",
+      meta: [
+        {
+          name: "description",
+          content: "Обучение перманентному макияжу в Сочи",
+        },
+      ],
+    };
+  },
   data: () => {},
   computed: {},
 };
