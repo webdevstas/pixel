@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" fixed="top">
       <nuxt-link exact class="nav-link" to="/">
-        <img class="header-logo" src="~assets/img/logo.svg" alt />
+        <img class="header-logo" src="~/assets/img/logo.svg" alt />
       </nuxt-link>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -30,21 +30,21 @@
               >Клиентов</b-dropdown-item
             >
           </b-nav-item-dropdown>
-          <b-nav-item to="/aktsii" active-class="nuxt-link-active"
-            >Акции</b-nav-item
-          >
-          <b-nav-item-dropdown right text="О нас">
-            <b-dropdown-item exact to="/o-nas" active-class="nuxt-link-active"
-              >О компании</b-dropdown-item
-            >
-            <b-dropdown-item to="/o-nas/mastera" active-class="nuxt-link-active"
-              >Наши мастера</b-dropdown-item
-            >
-          </b-nav-item-dropdown>
+<!--          <b-nav-item to="/aktsii" active-class="nuxt-link-active"-->
+<!--            >Акции</b-nav-item-->
+<!--          >-->
+<!--          <b-nav-item-dropdown right text="О нас">-->
+<!--            <b-dropdown-item exact to="/o-nas" active-class="nuxt-link-active"-->
+<!--              >О компании</b-dropdown-item-->
+<!--            >-->
+<!--            <b-dropdown-item to="/o-nas/mastera" active-class="nuxt-link-active"-->
+<!--              >Наши мастера</b-dropdown-item-->
+<!--            >-->
+<!--          </b-nav-item-dropdown>-->
           <b-nav-item to="/kontakty" active-class="nuxt-link-active"
             >Контакты</b-nav-item
           >
-          <b-nav-item to="/blog">Блог</b-nav-item>
+<!--          <b-nav-item to="/blog">Блог</b-nav-item>-->
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -54,7 +54,7 @@
 <script>
 export default {
   methods: {
-   
+
   }
 }
 </script>
@@ -67,20 +67,11 @@ export default {
   color: #fff
   position: fixed
   z-index: 1002
-  &:after
-    content: ''
-    display: block
-    width: 100%
-    height: 83px
-    position: absolute
-    left: 0
-    top: 0
-    z-index: -1
-    background-size: cover
-    background-attachment: fixed
-    backdrop-filter: blur(12px) brightness(70%)
+  backdrop-filter: blur(12px)
+  background-color: rgba(0,0,0,.2)
+  padding: 0
 .header-logo
-  width: 100px
+  width: 130px
 .nuxt-link-active
   color: #000 !important
 .dropdown-menu
@@ -91,7 +82,7 @@ export default {
   font-size: 18px
 .navbar-light .navbar-nav .nav-link .dropdown-toggle span
   color: #fff
-@media (max-width: 991px) 
+@media (max-width: 991px)
   .navbar-collapse
     background-color: rgba(255,255,255, .95)
     padding: 10px

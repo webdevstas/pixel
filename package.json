@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
+    "demon": "pm2-runtime ./node_modules/nuxt/bin/nuxt.js",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "test": "npm run test:unit && npm run test:e2e",

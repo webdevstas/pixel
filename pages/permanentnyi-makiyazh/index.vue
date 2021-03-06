@@ -12,12 +12,10 @@
           style="max-width: 20rem"
           class="mb-2"
         >
-          <!-- <b-card-text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </b-card-text> -->
 
-          <nuxt-link to="permanentnyi-makiyazh/brovi"><b-button variant="primary">Подробнее</b-button></nuxt-link>
+          <nuxt-link to="permanentnyi-makiyazh/brovi">
+            <b-button variant="primary">Подробнее</b-button>
+          </nuxt-link>
         </b-card>
       </b-col>
       <b-col>
@@ -30,12 +28,10 @@
           style="max-width: 20rem"
           classё="mb-2"
         >
-          <!-- <b-card-text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </b-card-text> -->
 
-          <nuxt-link to="permanentnyi-makiyazh/guby"><b-button  variant="primary">Подробнее</b-button></nuxt-link>
+          <nuxt-link to="permanentnyi-makiyazh/guby">
+            <b-button variant="primary">Подробнее</b-button>
+          </nuxt-link>
         </b-card>
       </b-col>
       <b-col>
@@ -48,12 +44,10 @@
           style="max-width: 20rem"
           class="mb-2"
         >
-          <!-- <b-card-text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </b-card-text> -->
 
-          <nuxt-link to="permanentnyi-makiyazh/veki"><b-button variant="primary">Подробнее</b-button></nuxt-link>
+          <nuxt-link to="permanentnyi-makiyazh/veki">
+            <b-button variant="primary">Подробнее</b-button>
+          </nuxt-link>
         </b-card>
       </b-col>
     </b-row>
@@ -62,13 +56,13 @@
 
 <script>
 export default {
-    head() {
+  head() {
     return {
-      title: "HELLO Permanent",
+      title: "Перманентный макияж в Сочи",
       meta: [
         {
           name: "description",
-          content: "Обучение перманентному макияжу в Сочи",
+          content: "Услуги перманентного макияжа в Сочи",
         },
       ],
     };
